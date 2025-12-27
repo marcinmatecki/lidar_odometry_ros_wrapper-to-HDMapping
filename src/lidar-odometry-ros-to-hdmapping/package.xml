@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>lidar-odometry-ros--to-hdmapping</name>
+  <name>lidar-odometry-ros-to-hdmapping</name>
   <version>0.0.0</version>
   <description>bag-lidar-odometry-ros-session convert</description>
 
