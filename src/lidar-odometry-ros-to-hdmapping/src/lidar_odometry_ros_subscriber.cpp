@@ -194,14 +194,14 @@ int main(int argc, char **argv)
         }
         
         if (msg->topic_name == "/odometry") {
-            RCLCPP_INFO(rclcpp::get_logger("LidarOdometryOdometry"), "Received message on topic: /odometry");
+            RCLCPP_INFO(rclcpp::get_logger("LidarOdometryRosOdometry"), "Received message on topic: /odometry");
         
             auto odom_msg = std::make_shared<nav_msgs::msg::Odometry>();
             rclcpp::SerializedMessage serialized_msg(*msg->serialized_data);
             serializationOdom.deserialize_message(&serialized_msg, odom_msg.get());
         
             if (!odom_msg) {
-                RCLCPP_ERROR(rclcpp::get_logger("LidarOdometryOdometry"), "Odometry message deserialization error!");
+                RCLCPP_ERROR(rclcpp::get_logger("LidarOdometryRosOdometry"), "Odometry message deserialization error!");
                 return 1;
             }
         
@@ -245,7 +245,7 @@ int main(int argc, char **argv)
 
             trajectory.push_back(pose);
         
-            RCLCPP_INFO(rclcpp::get_logger("LidarOdometryOdometry"), "Added position to trajectory: x=%.3f, y=%.3f, z=%.3f", x, y, z);
+            RCLCPP_INFO(rclcpp::get_logger("LidarOdometryRosOdometry"), "Added position to trajectory: x=%.3f, y=%.3f, z=%.3f", x, y, z);
         }
     }
 
