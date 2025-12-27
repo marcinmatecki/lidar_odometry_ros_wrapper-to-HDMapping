@@ -36,9 +36,6 @@ and start odometry:
 cd /test_ws/
 source ./install/setup.sh # adjust to used shell
 ros2 launch lidar_odometry_ros lidar_odometry.launch.py config_file:=<config_path> use_sim_time:=true pointcloud_topic:=<topic>
-```
-
-```shell
 ros2 bag play {path_to_bag}
 ```
 
