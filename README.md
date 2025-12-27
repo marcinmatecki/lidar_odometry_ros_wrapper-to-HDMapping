@@ -35,7 +35,7 @@ and start odometry:
 ```shell 
 cd /test_ws/
 source ./install/setup.sh # adjust to used shell
-ros2 launch lidar_odometry_ros lidar_odometry.launch.py config_file:=<config_path> use_sim_time:=true pointcloud_topic:=/livox/lidar_pc2
+ros2 launch lidar_odometry_ros lidar_odometry.launch.py config_file:=<config_path> use_sim_time:=true pointcloud_topic:=<topic>
 ```
 
 ```shell
@@ -67,7 +67,7 @@ ros2 bag record /odometry /feature_points -o {your_directory_for_the_recorded_ba
 ```shell
 cd /test_ws/
 source ./install/setup.sh # adjust to used shell
-ros2 launch lidar_odometry_ros lidar_odometry.launch.py config_file:=<config_path> use_sim_time:=true pointcloud_topic:=/livox/lidar_pc2
+ros2 launch lidar_odometry_ros lidar_odometry.launch.py config_file:=<config_path> use_sim_time:=true pointcloud_topic:=<topic>
 ```
 
 ```shell
